@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sääkaavio – OpenWeatherMap</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <h1>5 päivän sääennuste</h1>
+
+    <label for="kaupunki">Kaupunki:</label>
+    <input type="text" id="kaupunki" value="Helsinki" />
+    <button onclick="haeSaa()">Hae sää</button>
+    <label for="chartType">Kaavion tyyppi:</label>
+    <select id="chartType" onchange="paivitaKaavio()">
+        <option value="line">Viiva (Line)</option>
+        <option value="bar">Pylväs (Bar)</option>
+        <option value="pie">Piirakka (Pie)</option>
+    </select>
+    <canvas id="tempChart" width="400" height="200"></canvas>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
